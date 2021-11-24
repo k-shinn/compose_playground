@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
 //                    Column {
-                        MainHeader(contentsList = fetchHeaderContents)
-//                        HeaderContents(content = fetchHeaderContents[0])
+//                        MainHeader(contentsList = fetchHeaderContents)
+                        HeaderContents(content = fetchHeaderContents[0])
 //                    }
 //                    Greeting("Android")
                 }
