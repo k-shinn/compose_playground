@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">compose_playground</string>
+    <string name="sticky_menu_a">新着情報</string>
+    <string name="sticky_menu_b">クエスト</string>
+    <string name="sticky_menu_c">オモチケ</string>
+    <string name="sticky_menu_d">検索</string>
 </resources>

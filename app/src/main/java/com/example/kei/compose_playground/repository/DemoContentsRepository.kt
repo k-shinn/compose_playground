@@ -9,7 +9,6 @@ class DemoContentsRepository {
     fun fetchHeaderContents(): List<DemoContent> {
         val listOf = mutableListOf<DemoContent>()
         for (i in 0..9) {
-
             listOf.add(
                 DemoContent(
                     title = "header$i",
