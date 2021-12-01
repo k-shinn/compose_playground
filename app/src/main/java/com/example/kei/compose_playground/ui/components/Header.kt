@@ -1,4 +1,4 @@
-package com.example.kei.compose_playground.ui
+package com.example.kei.compose_playground.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image

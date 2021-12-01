@@ -4,10 +4,12 @@ import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import com.example.kei.compose_playground.repository.DemoContentsRepository
+import com.example.kei.compose_playground.ui.components.CardCarousel
+import com.example.kei.compose_playground.ui.components.MainHeader
+import com.example.kei.compose_playground.ui.components.StickyMenu
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -33,11 +35,11 @@ fun MainScreen() {
                 onClickC = { showToast(localContext, "clickC") },
                 onClickD = { showToast(localContext, "clickD") })
         }
-
-        // TODO
-        items(fetchHeaderContents) {
-            MainHeader(content = it,
-                onClick = {})
+        item {
+            CardCarousel(
+                contentsList = fetchHeaderContents,
+                onClickContents = { showToast(localContext, "clickCard") },
+                onClickMore = { showToast(localContext, "clickMore") })
         }
     }
 }
