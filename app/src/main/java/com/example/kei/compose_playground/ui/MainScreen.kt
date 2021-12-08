@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import com.example.kei.compose_playground.repository.DemoContentsRepository
 import com.example.kei.compose_playground.ui.components.CardCarousel
+import com.example.kei.compose_playground.ui.components.ListContents
 import com.example.kei.compose_playground.ui.components.MainHeader
 import com.example.kei.compose_playground.ui.components.StickyMenu
 import com.example.kei.compose_playground.ui.components.SubCarousel
@@ -46,6 +47,13 @@ fun MainScreen() {
                 contentsList = fetchHeaderContents,
                 onClickContents = { showToast(localContext, "clickCard") },
                 onClickMore = { showToast(localContext, "clickMore") })
+        }
+        fetchHeaderContents.forEach {
+            item {
+                ListContents(content = it) {
+                    showToast(localContext, "clickList")
+                }
+            }
         }
     }
 }
