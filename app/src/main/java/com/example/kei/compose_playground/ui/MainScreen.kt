@@ -10,6 +10,7 @@ import com.example.kei.compose_playground.repository.DemoContentsRepository
 import com.example.kei.compose_playground.ui.components.CardCarousel
 import com.example.kei.compose_playground.ui.components.MainHeader
 import com.example.kei.compose_playground.ui.components.StickyMenu
+import com.example.kei.compose_playground.ui.components.SubCarousel
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -34,6 +35,11 @@ fun MainScreen() {
                 onClickB = { showToast(localContext, "clickB") },
                 onClickC = { showToast(localContext, "clickC") },
                 onClickD = { showToast(localContext, "clickD") })
+        }
+        item {
+            SubCarousel(contentsList = fetchHeaderContents) {
+                showToast(localContext, "clickSubCarousel")
+            }
         }
         item {
             CardCarousel(
