@@ -5,6 +5,10 @@ import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import com.example.kei.compose_playground.repository.DemoContentsRepository
 import com.example.kei.compose_playground.ui.components.CardCarousel
@@ -22,6 +26,8 @@ fun MainScreen() {
 
     val localContext = LocalContext.current
     val fetchHeaderContents = DemoContentsRepository().fetchHeaderContents()
+
+    var selectedId by remember { mutableStateOf(-1) }
 
     LazyColumn {
         item {
@@ -50,7 +56,11 @@ fun MainScreen() {
         }
         fetchHeaderContents.forEach {
             item {
-                ListContents(content = it) {
+                ListContents(
+                    content = it,
+                    selectedId = selectedId
+                ) {
+                    selectedId = it.id
                     showToast(localContext, "clickList")
                 }
             }

@@ -113,6 +113,7 @@ fun RowScope.StickyMenuContents(
 fun PreviewHeaderContent() {
     val onclick = {}
     val content = DemoContent(
+        id = 0,
         title = "header",
         subTitle = "subTitle",
         imageUrl = "https://placehold.jp/00ffff/ffffff/350x160.png"

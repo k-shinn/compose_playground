@@ -11,6 +11,7 @@ class DemoContentsRepository {
         for (i in 0..9) {
             listOf.add(
                 DemoContent(
+                    id = i,
                     title = "header$i",
                     subTitle = "subTitle$i",
                     imageUrl = "https://placehold.jp/${randomColor().toString(16)}/ffffff/350x160.png?text=title$i"

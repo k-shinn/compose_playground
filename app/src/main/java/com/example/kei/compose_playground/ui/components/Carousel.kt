@@ -90,6 +90,7 @@ fun ThumbnailCard(
 fun PreviewThumbnailCard() {
     val onclick = {}
     val content = DemoContent(
+        id = 0,
         title = "header",
         subTitle = "subTitle",
         imageUrl = "https://placehold.jp/00ffff/ffffff/350x160.png"
@@ -104,6 +105,7 @@ fun PreviewThumbnailCard() {
 fun PreviewCardCarousel() {
     val onclick = {}
     val content = DemoContent(
+        id = 0,
         title = "header",
         subTitle = "subTitle",
         imageUrl = "https://placehold.jp/00ffff/ffffff/350x160.png"
